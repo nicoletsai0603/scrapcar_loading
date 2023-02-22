@@ -1,0 +1,98 @@
+.counter_num_b {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.counter_num {
+    width: calc( 50% - 2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40PX 0;
+}
+
+.counter_num h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #8C5219;
+    margin-bottom: 40px;
+}
+
+.counter_num .counter {
+    font-size: 3.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: #18BCDB;
+}
+
+.counter_num:nth-child(1) {
+    border-right: #DBCABC 1px solid;
+    border-bottom: #DBCABC 1px solid;
+}
+
+.img_ico {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.counter_num:nth-child(1) .img_ico {
+    background: url(../img/number1.svg) center no-repeat;
+    background-size: contain;
+}
+
+.counter_num:nth-child(2) {
+    border-bottom: #DBCABC 1px solid;
+}
+
+.counter_num:nth-child(2) .img_ico {
+    background: url(../img/number2.svg) center no-repeat;
+    background-size: contain;
+}
+
+.counter_num:nth-child(3) {
+    border-right: #DBCABC 1px solid;
+}
+
+.counter_num:nth-child(3) .img_ico {
+    background: url(../img/number3.svg) center no-repeat;
+    background-size: contain;
+}
+
+.counter_num:nth-child(4) .img_ico {
+    background: url(../img/number4.svg) center no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 780px) {
+    .counter_num {
+        width: calc( 80% - 2px);
+        margin: auto;
+    }
+    .counter_num {
+        border: #DBCABC 1px solid;
+    }
+}
+
+
+/* hover動畫 */
+
+@keyframes pulse {
+    0% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(20px);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+.counter_num:hover .img_ico {
+    animation: pulse 2s;
+    animation-duration: 1.5s;
+}
